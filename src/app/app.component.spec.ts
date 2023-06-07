@@ -1,10 +1,8 @@
 import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [RouterTestingModule],
     declarations: [AppComponent]
   }));
 
@@ -14,16 +12,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'pokedex_web_new'`, () => {
+  it(`should have as title 'PokemonsWebsite'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('pokedex_web_new');
+    expect(app.title).toEqual('PokemonsWebsite');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('pokedex_web_new app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('PokemonsWebsite app is running!');
   });
 });
